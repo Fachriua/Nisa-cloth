@@ -4,6 +4,8 @@ import image2 from '../assets/image/thrift2.jpg';
 import image3 from '../assets/image/thrift3.jpg';
 import { Link } from 'react-router-dom';
 import ButtonHover from '../components/ButtonHover';
+import CardProduct from '../components/CardProduct';
+import FormSignIn from '../components/FormSignIn';
 
 function Home() {
     return(
@@ -42,7 +44,7 @@ function Home() {
         </div>
 
 
-        <div className="grid grid-rows-3 grid-flow-rows h-52 mt-20 gap-2 md:grid-cols-3 mt-20 lg:grid-cols-3 mt-20">
+        <div className="grid grid-rows-3 grid-flow-rows h-52 mt-20 mb-36 md:mb-7 lg:mb-7 gap-2 md:grid-cols-3 lg:grid-cols-30">
             <div>
                 <div
                     className="hero h-44">
@@ -87,6 +89,22 @@ function Home() {
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="grid grid-rows-1 grid-flow-rows mt-8 md:grid-cols-2 lg:grid-cols-2">
+            <div className="grid grid-rows-1 grid-flow-rows gap-4">
+                <div className="grid grid-rows-1 grid-flow-rows md:grid-cols-2 lg:grid-cols-2">
+                    <div><CardProduct/></div>
+                    <div><CardProduct/></div>
+                </div>
+                <div className="grid grid-rows-1 grid-flow-rows md:grid-cols-2 lg:grid-cols-2">
+                    <div><CardProduct/></div>
+                    <div><CardProduct/></div>
+                </div>
+            </div>
+            <div className="flex items-center justify-center mt-10">
+                <FormSignIn/>
             </div>
         </div>
         </>

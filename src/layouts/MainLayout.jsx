@@ -65,7 +65,7 @@ function MainLayout() {
       <div className="box-content h-auto w-90% p-8 mx-8 justify-center">
       <Outlet/>
       </div>
-      <footer className="footer bg-neutral text-neutral-content p-10">
+      <footer className="footer bg-neutral text-neutral-content p-10 mt-28">
         <aside>
           <svg
             width="50"
