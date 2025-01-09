@@ -92,13 +92,13 @@ function Home() {
             </div>
         </div>
 
-        <div className="grid grid-rows-1 grid-flow-rows mt-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-rows-1 grid-flow-rows mt-8 justify-center md:grid-cols-2 lg:grid-cols-2">
             <div className="grid grid-rows-1 grid-flow-rows gap-4">
-                <div className="grid grid-rows-1 grid-flow-rows md:grid-cols-2 lg:grid-cols-2">
+                <div className="grid grid-cols-2 grid-flow-cols md:grid-cols-2 lg:grid-cols-2">
                     <div><CardProduct/></div>
                     <div><CardProduct/></div>
                 </div>
-                <div className="grid grid-rows-1 grid-flow-rows md:grid-cols-2 lg:grid-cols-2">
+                <div className="grid grid-cols-2 grid-flow-cols md:grid-cols-2 lg:grid-cols-2">
                     <div><CardProduct/></div>
                     <div><CardProduct/></div>
                 </div>

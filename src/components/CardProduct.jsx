@@ -9,12 +9,12 @@ import {
    
   export function CardProduct() {
     return (
-      <Card className="w-52">
+      <Card className="w-32 h-80 md:w-52 lg:w-52">
         <CardHeader shadow={false} floated={false} className="h-52">
           <img
             src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
             alt="card-image"
-            className="h-full w-full object-cover"
+            className="h-24 w-full object-cover md:w-full md:h-full"
           />
         </CardHeader>
         <CardBody>
