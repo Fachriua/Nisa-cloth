@@ -7,7 +7,9 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <RouterProvider router={router}></RouterProvider>
+    <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 )
 
 reportWebVitals();
