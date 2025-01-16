@@ -28,13 +28,13 @@ function MainLayout() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <li><Link to="/">Home</Link></li>
               <li>
-                <a>Parent</a>
+                <a><Link to="products">Product</Link></a>
                 <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
+                <li><Link to="wtops">Tops</Link></li>
+                <li><Link to="bottoms">Bottoms</Link></li>
                 </ul>
               </li>
-              <li><a>Item 3</a></li>
+              <li><Link to="about">About</Link></li>
             </ul>
           </div>
             <img src={logo} alt="" className="h-8 w-18" />
@@ -47,7 +47,7 @@ function MainLayout() {
                 <summary><Link to="products">Products</Link></summary>
                 <ul className="p-2">
                   <li><Link to="wtops">Tops</Link></li>
-                  <li><Link to="Bottoms">Bottoms</Link></li>
+                  <li><Link to="bottoms">Bottoms</Link></li>
                 </ul>
               </details>
             </li>
