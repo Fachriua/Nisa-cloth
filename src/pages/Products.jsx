@@ -1,6 +1,10 @@
+import Product from "../components/Product";
+
 function Products() {
     return(
-        <p>ini halaman product</p>
+        <>
+        <Product/>
+        </>
     )
 }
 
