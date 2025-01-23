@@ -15,12 +15,18 @@
     "@material-tailwind/react": "^2.1.10",
     "@mui/material": "^6.3.1",
     "@mui/styled-engine-sc": "^6.3.1",
+    "@reduxjs/toolkit": "^2.5.0",
     "dom": "^0.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.1",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "redux-toolkit": "^1.1.2",
     "router": "^2.0.0",
     "styled-components": "^6.1.14",
+    "thunk": "^0.0.1",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {

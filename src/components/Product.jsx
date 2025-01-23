@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {
   Card,
   CardHeader,
@@ -8,34 +7,29 @@ import {
   Button,
 } from "@material-tailwind/react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProduct } from "../store/actions/product-actions";
+import { useEffect } from "react";
+
+
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products');
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+    // Ambil state dari Redux
+    const { products, isLoading, error } = useSelector((state) => state.Product);
+  
+    useEffect(() => {
+      dispatch(fetchProduct());
+    }, [dispatch]);
+  
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="grid grid-cols-4 gap-6 p-4">
-        {products.map((product) => (
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        {products.length > 0 ? (
+        products.map((product) => (
             <Card className="w-full" key={product.id}>
             <CardHeader shadow={false} floated={false} className="h-52">
                 <img
@@ -46,14 +40,14 @@ const Product = () => {
             </CardHeader>
             <CardBody>
                 <div className="mb-2 flex items-center justify-between">
-                <Typography color="blue-gray" className="font-medium">
+                <Typography color="blue-gray" className="font-normal">
                     {product.title.substring(0, 30)}...
                 </Typography>
                 <Typography color="blue-gray" className="font-medium">
                     ${product.price.toFixed(2)}
                 </Typography>
                 </div>
-                <Typography variant="small" color="gray" className="font-normal opacity-75">
+                <Typography variant="small" color="gray" className="font-normal opacity-75 hidden sm:block">
                 {product.description.substring(0, 100)}...
                 </Typography>
             </CardBody>
@@ -79,7 +73,9 @@ const Product = () => {
                 </Button>
             </CardFooter>
             </Card>
-        ))}
+        ))) : (
+            <div>No products available</div>
+          )}
     </div>
   );
 };
